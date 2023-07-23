@@ -64,13 +64,8 @@ function CreatePost() {
           resolve(event.target.result);
         };
         reader.readAsDataURL(file);
-        console.log(reader);
       });
     });
-
-    console.log(imageData);
-    
-    console.log(files);
 
     Promise.all(promises)
       .then((results) => {
@@ -83,7 +78,6 @@ function CreatePost() {
       .catch((error) => {
         console.log(error);
       });
-      console.log('after imageData',imageData);
   };
 
   return (
